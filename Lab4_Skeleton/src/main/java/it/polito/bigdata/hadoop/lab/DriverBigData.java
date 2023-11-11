@@ -97,7 +97,7 @@ public class DriverBigData extends Configured implements Tool {
 			// Change the following part of the code
 			Path outputDir2;
 			int numberOfReducersJob2;
-			outputDir2 = new Path(args[4]);
+			outputDir2 = new Path(args[3]);
 
 			// Set path of the input file/folder for this second job
 			// The output of the first job is the input of this second job    
@@ -117,22 +117,22 @@ public class DriverBigData extends Configured implements Tool {
 
 			// Set map class
 			job2.setMapperClass(MapperBigData2.class);
-/*
+
 			// Set map output key and value classes
-			job2.setMapOutputKeyClass(...);
-			job2.setMapOutputValueClass(...);
+			job2.setMapOutputKeyClass(Text.class);
+			job2.setMapOutputValueClass(FloatWritable.class);
 
 			// Set reduce class
 			job2.setReducerClass(ReducerBigData2.class);
 
 			// Set reduce output key and value classes
-			job2.setOutputKeyClass(...);
-			job2.setOutputValueClass(...);
+			job2.setOutputKeyClass(Text.class);
+			job2.setOutputValueClass(FloatWritable.class);
 
 			// Set the number of reducers of the second job 
-			numberOfReducersJob2 = ..;
+			numberOfReducersJob2 = 1;
 			job2.setNumReduceTasks(numberOfReducersJob2);
-*/
+
 			// Execute the second job and wait for completion
 			if (job2.waitForCompletion(true) == true)
 				exitCode = 0;

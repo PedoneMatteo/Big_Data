@@ -16,7 +16,7 @@
             "request": "launch",
             "mainClass": "it.polito.bigdata.hadoop.lab.DriverBigData",
             "projectName": "Lab4",
-            "args": ["1", "./InputFolder", "OutputFolder"]
+            "args": ["1", "./InputFolder", "./OutputFolder/f1", "OutputFolder/f2"]
         }
     ]
 }
