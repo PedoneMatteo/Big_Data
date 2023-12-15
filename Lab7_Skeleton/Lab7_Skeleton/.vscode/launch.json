@@ -16,7 +16,7 @@
             "request": "launch",
             "mainClass": "it.polito.bigdata.spark.example.SparkDriver",
             "projectName": "Lab7_Template",
-            "args": ["./sampleData/registerSample.csv", "./sampleData/stations.csv",  "0.5", "output"]
+            "args": ["./sampleData/registerSample.csv", "./sampleData/stations.csv",  "0.4", "output"]
         }
     ]
 }
